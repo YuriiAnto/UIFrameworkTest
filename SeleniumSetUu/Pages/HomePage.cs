@@ -8,13 +8,13 @@ namespace SeleniumSetUu.Pages
 {
     public class HomePage : DriverHelper
     {
-        public IWebElement CartElement => Driver.FindElement(By.XPath("//*[@id=\"shopping_cart_container\"]/a"));
+        public IWebElement CartElement => Driver.FindElement(By.XPath("//a[@class='shopping_cart_link']"));
         public IWebElement BurgerMenu => Driver.FindElement(By.Id("react-burger-menu-btn"));
-        public IWebElement LogoutLink => Driver.FindElement(By.Id("logout_sidebar_link"));
+        public IWebElement LogoutLink => Driver.FindElement(By.XPath("//a[text()='Logout']"));
         public IWebElement Filter => Driver.FindElement(By.CssSelector("#header_container > div.header_secondary_container > div.right_component > span > select"));
         public IWebElement AddToCartButton => Driver.FindElement(By.Id("add-to-cart-sauce-labs-backpack"));
         public IWebElement RemoveFromCartButton => Driver.FindElement(By.Id("remove-sauce-labs-backpack"));
-        public IWebElement CartIcone => Driver.FindElement(By.XPath("//*[@id=\"shopping_cart_container\"]/a/span"));
+        public IWebElement CartIcone => Driver.FindElement(By.XPath("//*[@class='shopping_cart_badge']"));
         public ICollection<IWebElement> InventoryItems => Driver.FindElements(By.ClassName("inventory_item_name"));
 
 

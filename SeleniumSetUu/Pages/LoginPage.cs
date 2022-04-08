@@ -5,9 +5,9 @@ namespace SeleniumSetUu.Pages
     public class LoginPage : DriverHelper
     {
         public IWebElement UsernameField => Driver.FindElement(By.Id("user-name"));
-        public IWebElement UserPassword => Driver.FindElement(By.Id("password"));
+        public IWebElement UserPassword => Driver.FindElement(By.XPath("//input[@name='password']"));
         public IWebElement SubmitButton => Driver.FindElement(By.Id("login-button"));
-        public IWebElement ErrorMessage => Driver.FindElement(By.XPath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3"));
+        public IWebElement ErrorMessage => Driver.FindElement(By.XPath("//h3[@data-test='error']"));
 
 
         public void SetLoginData(string username, string password)
